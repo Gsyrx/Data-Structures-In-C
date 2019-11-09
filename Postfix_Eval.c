@@ -10,12 +10,15 @@ void PUSH(int num)
 }
 int POP()
 {
-    return (s[top--]);
+    int ditem;
+    ditem=s[top];
+    top--;
+    return (ditem);
 }
 void main()
 {
     int j =0;
-    printf("enter the postfix expression\n");
+    printf("Enter the postfix expression :- ");
     gets(postfix);
 
     while(postfix[j] != '\0')
@@ -23,7 +26,7 @@ void main()
         ch = postfix[j];
         if(isalpha(ch))
         {
-            printf("enter the value for %c  :- ",ch);
+            printf("Enter the value for %c  :- ",ch);
             scanf("%d", &num);
             PUSH(num);
         }
@@ -41,10 +44,13 @@ void main()
                             break;
                 case '-' : PUSH(op1-op2);
                             break;
-                default:  printf("Wrong oerator");
+                default:  printf("Wrong operator !!");
             }
         }
         j++;
     }
-    printf("output = %d", s[top]);
+    if(top==0)
+    printf("Output = %d", s[top]);
+    else
+    printf("Invalid postfix expression !!!");
 }
