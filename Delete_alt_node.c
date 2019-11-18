@@ -28,7 +28,7 @@ void create_list()
 			{	
 				ptr=ptr->next;		
 			}
-	        ptr->next = temp;
+	       		 ptr->next = temp;
 		}
 	
 }
@@ -62,7 +62,7 @@ void deleteAlt()
 void display()
 {   // NO NODE
 	if(head==NULL)
-		printf("Link is empty !!");
+		printf("List is empty !!");
 	else	// NODE PRESENT
 	{	
 		ptr = head;
@@ -88,10 +88,10 @@ void main()
 				    break;
 			case 2: display();
 				    break;
-            case 3: deleteAlt();
-                    break;
-            case 4: exit(0);
-            default: printf("INVALID CHOICE !!");
-        }
-    }
+            		case 3: deleteAlt();
+                    		    break;
+            		case 4: exit(0);
+            		default: printf("INVALID CHOICE !!");
+        	}
+    	}
 }
