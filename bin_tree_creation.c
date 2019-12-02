@@ -62,7 +62,7 @@ void inorder(struct node *tree)
     if(tree!=NULL)
     {
         inorder(tree->llink);
-        printf("%d",tree->data);
+        printf("%d<-->",tree->data);
         inorder(tree->rlink);
     }
 
@@ -73,7 +73,7 @@ void postorder(struct node *tree)
     {
         postorder(tree->llink);
         postorder(tree->rlink);
-        printf("%d",tree->data);
+        printf("%d<-->",tree->data);
     }
 
 }
@@ -81,7 +81,7 @@ void preorder(struct node *tree)
 {
     if(tree!=NULL)
     {
-        printf("%d",tree->data);
+        printf("%d<-->",tree->data);
         preorder(tree->llink);
         preorder(tree->rlink);
     }
